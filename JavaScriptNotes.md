@@ -137,3 +137,119 @@ var myFloat = parseFloat("1.999")
 ```JavaScript
 <a href="JavaScript:void(0)" onClick="alert('Hi');">click me</a>
 ```
+### event OnFocus
+#### this event focus on a field and highliter
+```JavaScript
+<input type="text" size="30" value="name" onFocus="this.style.background='yellow';">
+
+```
+### asign value to a HTML textfield with JavaScript
+#### example to generate a cityname by a zipcode 
+```JavaScript
+<form>
+     Zip:<br>
+     <input type="text" id="zip" onblur="fillcity();"><br>
+     City:<br>
+     <input type="text" id="city">
+     <input type="text" id="state">
+ </form>
+ <script>
+     function fillcity(){
+         var cityName;
+         var zipEntered = document.getElementById("zip").value;
+         if(zipEntered === "60608") {
+             cityName = "Chicago";
+             
+         }else if(zipEntered === "68114"){
+             cityName = "Omaha";
+
+         }else if(zipEntered === "53212"){
+             cityName = "Milwaukee";
+         }
+         switch(zipEntered){
+             case "60608":
+                 cityName = "Chicago";
+                 break;
+             case "68114":
+                 cityName = "Omaha";
+                 break;
+             case "53212":
+                 cityName = "Milwaukee";
+         }
+         document.getElementById("city").value = cityName;
+     };
+```
+### Setting Style with JavaScript
+```JavaScript
+function makebig(){
+    document.getElementById("idexample").style.fontSize = "2em";
+ 
+/* Position*/
+    document.getElementById("pic99").style.cssFloat = "left";
+
+/*This statement makes an element invisible.*/
+document.getElementById("div9").style.visibility = "hidden";
+
+ /*This statement gives an element left and right margins of 10 pix. */
+document.getElementById("mainPic").style.margin = "0 10px 0 10px;";
+}
+```
+### get time javaScrit
+```JavaScript
+function gettime(){
+    let now = new date();
+    let thehour = now.getHours();
+    let theminutes = now.getMinutes();
+    let theseconds = now.getSeconds();
+    document.getElementById("the id").innerHTML = "The current time " + thehour + " : " + theminutes + " : " theseconds; 
+}
+```
+### replace method
+```HTML
+<P id="demo">Welcome to my school</P>
+<input type="button" value="click me" onclick="replaceText();">
+```
+```JavaScript
+function replaceText(){
+    let text = document.getElementById("demo").innerHTML;
+    document.getElementById("demo").innerHTML = text.replace("school", "house");
+}
+```
+### toLowerCase() and toUpperCase() method
+```HTML
+<P id="demo">Welcome to my school</P>
+<input type="button" value="click me" onclick="replaceText();">
+```
+```JavaScript
+function replaceText(){
+    let text = document.getElementById("demo").innerHTML;
+    document.getElementById("demo").innerHTML = text.toLowerCase();
+}
+function replaceText(){
+    let text = document.getElementById("demo").innerHTML;
+    document.getElementById("demo").innerHTML = text.toLowerCase();
+}
+```
+### conditions
+```JavaScript
+    function compare(){
+         let str1;
+         let age = Number(document.getElementById("age").value);
+         if(isNaN(age)){
+             str1 = "enter a number";
+         } else{
+             str1 = (age < 18) ?"you are too young to vote":"your have right to vote";
+         }
+         document.getElementById("demo01").innerHTML = str1 + " Thank you";
+     }
+     
+```
+### for loop
+```JavaScript
+let str1 = "";
+ for (let i = 0; i < 5; i++){
+     carempty += "the number is " + i + "<br>";
+ }
+  document.getElementById("demo01").innerHTML = str1;
+```
+---
